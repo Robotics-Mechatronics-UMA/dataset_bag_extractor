@@ -44,7 +44,7 @@ The different implemented nodes in this repo offer a wide variety of examples:
 To build from source, clone the latest version from this repository into your catkin workspace and compile the package using:
 
     cd catkin_workspace/src
-    git clone https://github.com/davidmorillacabello/husky_highlevel_controller.git
+    git clone https://github.com/Robotics-Mechatronics-UMA/dataset_bag_extractor.git
     cd ../
     catkin build
 
@@ -53,7 +53,7 @@ To build from source, clone the latest version from this repository into your ca
 Check the launchfile to create one that adjusts to your specific needs in structure, sensors and topics. A minimal example is included as a test and can be run with:
 
     roslaunch bag_extractor extract_dataset.launch\ 
-        bag:="[...]/catkin_ws/src/bag_extractor/test/test.bag"
+        bag:="[...]/catkin_ws/src/dataset_bag_extractor/test/test.bag"
 
 ## Launch files
 
@@ -104,8 +104,7 @@ In order to open and parse the data from the binary file, the followings command
 * `numpy:`
 
 ```python
-    import numpy as np
-    
+    import numpy as np   
     points = np.fromfile(filename, dtype=np.float32).reshape(-1, 4)
 ```
 
